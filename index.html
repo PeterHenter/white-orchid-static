@@ -53,30 +53,30 @@
             button.classList.remove('z-depth-2');
         });
 
-        // // Ripple effect on clicking the button
-        // const rippleOnClick = function (event) {
-        //     event.currentTarget.querySelectorAll('.ripple').forEach(element => {
-        //         element.remove();
+        // Ripple effect on clicking the button
+        const rippleOnClick = function (event) {
+            event.currentTarget.querySelectorAll('.ripple').forEach(element => {
+                element.remove();
 
-        //     });
-        //     const clickedElement = event.currentTarget.getBoundingClientRect();
-        //     const clickCoordinates = { x: event.clientX, y: event.clientY };
+            });
+            const clickedElement = event.currentTarget.getBoundingClientRect();
+            const clickCoordinates = { x: event.clientX, y: event.clientY };
 
-        //     const xDiff = Math.max(clickCoordinates.x - clickedElement.left, clickedElement.right - clickCoordinates.x);
-        //     const yDiff = Math.max(clickCoordinates.y - clickedElement.top, clickedElement.bottom - clickCoordinates.y);
-        //     const radius = Math.sqrt(xDiff ** 2 + yDiff ** 2);
+            const xDiff = Math.max(clickCoordinates.x - clickedElement.left, clickedElement.right - clickCoordinates.x);
+            const yDiff = Math.max(clickCoordinates.y - clickedElement.top, clickedElement.bottom - clickCoordinates.y);
+            const radius = Math.sqrt(xDiff ** 2 + yDiff ** 2);
 
-        //     const clickRipple = document.createElement('div');
-        //     clickRipple.classList.add('ripple');
-        //     clickRipple.style.width = clickRipple.style.height = `${radius * 2}px`;
-        //     clickRipple.style.position = "absolute";
-        //     clickRipple.style.left = `${clickCoordinates.x - radius - clickedElement.left}px`;
-        //     clickRipple.style.top = `${clickCoordinates.y - radius - clickedElement.top}px`;
+            const clickRipple = document.createElement('div');
+            clickRipple.classList.add('ripple');
+            clickRipple.style.width = clickRipple.style.height = `${radius * 2}px`;
+            clickRipple.style.position = "absolute";
+            clickRipple.style.left = `${clickCoordinates.x - radius - clickedElement.left}px`;
+            clickRipple.style.top = `${clickCoordinates.y - radius - clickedElement.top}px`;
 
-        //     event.currentTarget.appendChild(clickRipple);
-        // };
+            event.currentTarget.appendChild(clickRipple);
+        };
 
-        // button.addEventListener('click', rippleOnClick);
+        button.addEventListener('click', rippleOnClick);
 
         // Laying out the navbar based on viewport size.
         document.addEventListener('DOMContentLoaded', () => {
@@ -103,15 +103,21 @@
                 burger.style.visibility = "visible";
 
             }
-
         });
     </script>
-    <!-- About Us -->
-    <!-- References -->
-    <!-- Gallery -->
-    <!-- Prices -->
-    <!-- Get a quote -->
+    <main>
+        <!-- About Us -->
+        <!-- References -->
+        <!-- Gallery -->
+        <!-- Prices -->
+        <!-- Get a quote -->
+    </main>
     <!-- Footer -->
+    <footer class="footer-copyright">
+        <div class="center-align">
+            <p>Copyright &copy; 2020 <a href="https://peterhenter.github.io/" rel="author" target="_blank">Peter Henter</a></p>
+        </div>
+    </footer>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
