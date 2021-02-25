@@ -21,92 +21,66 @@
         </div>
         <div id="menu-items">
             <img src="/assets/menu-black-48dp.svg" class="menu-item" id="collapsed-icon">
-            <div class="menu-item">Home</div>
-            <div class="menu-item menu-item-active">Home</div>
-            <div class="menu-item" style="font-size: 200%;">Home</div>
-            <div class="menu-item">References</div>
+            <div class="menu-item menu-item-active" onclick="location.href = '#top';" `>Home</div>
+            <div class="menu-item" onclick="location.href = 'services.html';">Services & pricing</div>
+            <div class="menu-item" onclick="location.href = 'references.html';">References</div>
+            <div class="menu-item" onclick="location.href = 'gallery.html';">Gallery</div>
+            <div class="menu-item" onclick="location.href = 'contacts.html';">Contact Us</div>
             <button class="menu-item" type="button" id="quoteButton">
                 Get a quote
             </button>
         </div>
     </nav>
 
-    <script>
-        const navbar = document.querySelector('nav');
-        const logo = navbar.querySelector('#logo-and-title');
-        const title = navbar.querySelector('#title');
-        const menu = navbar.querySelector('#menu-items');
-        const links = menu.querySelectorAll('div');
-        const button = menu.querySelector('#quoteButton');
-        const burger = menu.querySelector('#collapsed-icon');
-
-        // Changing the color of the navbar button when the user hovers the cursor over it
-        button.addEventListener('mouseover', (e) => {
-            button.setAttribute('style', 'background-color: #f44336');
-            button.style.color = "white"
-            button.classList.add('z-depth-2');
-        });
-
-        button.addEventListener('mouseout', (e) => {
-            button.setAttribute('style', 'background-color: inherited');
-            button.style.color = "#f44336"
-            button.classList.remove('z-depth-2');
-        });
-
-        // Ripple effect on clicking the button
-        const rippleOnClick = function (event) {
-            event.currentTarget.querySelectorAll('.ripple').forEach(element => {
-                element.remove();
-
-            });
-            const clickedElement = event.currentTarget.getBoundingClientRect();
-            const clickCoordinates = { x: event.clientX, y: event.clientY };
-
-            const xDiff = Math.max(clickCoordinates.x - clickedElement.left, clickedElement.right - clickCoordinates.x);
-            const yDiff = Math.max(clickCoordinates.y - clickedElement.top, clickedElement.bottom - clickCoordinates.y);
-            const radius = Math.sqrt(xDiff ** 2 + yDiff ** 2);
-
-            const clickRipple = document.createElement('div');
-            clickRipple.classList.add('ripple');
-            clickRipple.style.width = clickRipple.style.height = `${radius * 2}px`;
-            clickRipple.style.position = "absolute";
-            clickRipple.style.left = `${clickCoordinates.x - radius - clickedElement.left}px`;
-            clickRipple.style.top = `${clickCoordinates.y - radius - clickedElement.top}px`;
-
-            event.currentTarget.appendChild(clickRipple);
-        };
-
-        button.addEventListener('click', rippleOnClick);
-
-        // Laying out the navbar based on viewport size.
-        document.addEventListener('DOMContentLoaded', () => {
-            const viewPortWidth = document.documentElement.clientWidth;
-            // const navbarWidth = navbar.getBoundingClientRect().width;
-            let logoWidth = logo.getBoundingClientRect().width;
-            const linksWidth = menu.getBoundingClientRect().width;
-            const burgerWidth = 78;
-
-            if ((logoWidth + linksWidth) / 0.9 < viewPortWidth) {
-                logo.style.visibility = "visible";
-                menu.style.visibility = "visible";
-            } else {
-                links.forEach(link => link.style.display = "none");
-                button.style.display = "none";
-                burger.style.display = "inline";
-                let titleFontSize = 2.1;
-                while ((logoWidth + burgerWidth) > viewPortWidth) {
-                    titleFontSize -= 0.1;
-                    title.setAttribute('style', `font-size: ${titleFontSize}rem`);
-                    logoWidth = logo.getBoundingClientRect('#logo-and-title').width;
-                }
-                logo.style.visibility = "visible";
-                burger.style.visibility = "visible";
-
-            }
-        });
-    </script>
-    <main>
-        <!-- About Us -->
+    <main class="blue-grey-text text-darken-3">
+        <!-- Home/About Us -->
+        <div class="section">
+            <div class="container">
+                <h3>WELCOME</h3>
+                <p class="flow-text">
+                    House and Business Cleaning in Manchester by White Orchids the cleaner team.
+                    We provide a range of first class domestic and commercial cleaning services throughout Manchester.
+                    <a href="references.html">
+                        With many satisfied clients
+                    </a>
+                    we pride ourselves in putting the client first and providing affordable house and
+                    business
+                    cleaning services that are second to none. With a range of one-off or regular cleaning services we
+                    are
+                    sure
+                    we have what you are looking for.
+                    At White Orchids the cleaner team we provide a
+                    <a href="services.html">wide range of domestic and commercial cleaning
+                        services</a>.
+                </p>
+                <p class="flow-text">
+                    These services include:
+                </p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Regular weekly, fortnightly, and monthly house cleaning
+                            </td>
+                            <td> from £12</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="row">
+                    <div class="col s10 m8">
+                        <span class="flow-text">One Off clean - End of tenancy cleaning</span>
+                    </div>
+                    <div class="col s2 m4">
+                        <span class="flow-text">
+                            from <strong>£12</strong>
+                        </span>
+                    </div>
+                </div>
+                <p class="flow-text">
+                    As well as a lot more! You name it we deliver it.
+                </p>
+            </div>
+        </div>
         <!-- References -->
         <!-- Gallery -->
         <!-- Prices -->
@@ -115,9 +89,11 @@
     <!-- Footer -->
     <footer class="footer-copyright">
         <div class="center-align">
-            <p>Copyright &copy; 2020 <a href="https://peterhenter.github.io/" rel="author" target="_blank">Peter Henter</a></p>
+            <p>Copyright &copy; 2020 <a href="https://peterhenter.github.io/" rel="author" target="_blank">Peter
+                    Henter</a></p>
         </div>
     </footer>
+    <script src="navbar.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>

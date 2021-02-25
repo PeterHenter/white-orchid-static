@@ -48,7 +48,8 @@
 }
 
 .menu-item-active {
-    font-size: 150%;
+    /* font-size: 150%; */
+    font-weight: bold;
 }
 
 #collapsed-icon {
