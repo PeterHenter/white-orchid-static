@@ -111,3 +111,14 @@ body {
 main {
     flex: 1 0 auto;
 }
+
+/* List formatting */
+ol{
+    list-style-type: upper-roman;
+    font-weight: 500;
+}
+
+ul{
+    list-style-type: circle;
+    font-weight: 400;
+}

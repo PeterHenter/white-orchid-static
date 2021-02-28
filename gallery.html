@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>White Orchids | About Us </title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav id="navbar" class="blue-grey-text text-darken-2 z-depth-2">
+        <div id="logo-and-title">
+            <img id="logo" src="/assets/logo.jpg">
+            <div id="title">White Orchid Cleaners</div>
+        </div>
+        <div id="menu-items">
+            <img src="/assets/menu-black-48dp.svg" class="menu-item" id="collapsed-icon">
+            <div class="menu-item" onclick="location.href = 'index.html';" `>Home</div>
+            <div class="menu-item" onclick="location.href = 'services.html';">Services & pricing</div>
+            <div class="menu-item" onclick="location.href = 'testimonials.html';">Testimonials</div>
+            <div class="menu-item menu-item-active" onclick="location.href = 'gallery.html';">Gallery</div>
+            <div class="menu-item" onclick="location.href = 'contacts.html';">Contact Us</div>
+            <button class="menu-item" type="button" id="quoteButton">
+                Get a quote
+            </button>
+        </div>
+    </nav>
+
+    <main class="blue-grey-text text-darken-3">
+        <!-- <div class="carousel">
+            <a href="#one!" class="carousel-item"><img src="assets/image1.jpg" alt=""></a>
+            <a href="#two!" class="carousel-item"><img src="assets/image2.jpg" alt=""></a>
+            <a href="#three!" class="carousel-item"><img src="assets/image3.jpg" alt=""></a>
+            <a href="#four!" class="carousel-item"><img src="assets/image4.jpg" alt=""></a>
+            <a href="#five!" class="carousel-item"><img src="assets/image5.jpg" alt=""></a>
+            <a href="#six!" class="carousel-item"><img src="assets/image6.jpg" alt=""></a>
+            <a href="#seven!" class="carousel-item"><img src="assets/image7.jpg" alt=""></a>
+            <a href="#eight!" class="carousel-item"><img src="assets/image8.jpg" alt=""></a>
+            <a href="#nine!" class="carousel-item"><img src="assets/image9.jpg" alt=""></a>
+            <a href="#ten!" class="carousel-item"><img src="assets/image10.jpg" alt=""></a>
+            <a href="#eleven!" class="carousel-item"><img src="assets/image11.jpg" alt=""></a>
+            <a href="#twelve!" class="carousel-item"><img src="assets/image12.jpg" alt=""></a>
+        </div> -->
+        
+  <div class="carousel">
+    <a class="carousel-item" href="assets/image1.jpg"><img src="assets/image1.jpg"></a>
+    <a class="carousel-item" href="#two!"><img src="assets/image2.jpg"></a>
+    <a class="carousel-item" href="#three!"><img src="assets/image3.jpg"></a>
+    <a class="carousel-item" href="#four!"><img src="assets/image4.jpg"></a>
+    <a class="carousel-item" href="#five!"><img src="assets/image5.jpg"></a>
+  </div>
+      
+    </main>
+    <!-- Footer -->
+    <footer class="footer-copyright">
+        <div class="center-align">
+            <p>Copyright &copy; 2020 <a href="https://peterhenter.github.io/" rel="author" target="_blank">Peter
+                    Henter</a></p>
+        </div>
+    </footer>
+    <script src="navbar.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            var elems = document.querySelectorAll('.carousel');
+            var instances = M.Carousel.init(elems);
+        });
+    </script>
+</body>
+
+</html>
