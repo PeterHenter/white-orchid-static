@@ -112,13 +112,25 @@ main {
     flex: 1 0 auto;
 }
 
-/* List formatting */
-ol{
+/* Footer styles */
+
+.page-footer {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#contact-details{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/* List styles */
+
+ol {
     list-style-type: upper-roman;
     font-weight: 500;
 }
 
-ul{
+ul {
     list-style-type: circle;
     font-weight: 400;
 }
